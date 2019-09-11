@@ -15,6 +15,9 @@ module RailstutorialSampleApp
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    #Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+    Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+
+    # 認証トークンをremoteフォームに埋め込む
+    config.action_view.embed_authenticity_token_in_remote_forms = true
   end
 end
